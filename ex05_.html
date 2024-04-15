@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문장 만들기</title>
+</head>
+<body>
+    <p id="sentence"></p>
+    <script>
+        function makeSentence(){
+            const diceElement = document.getElementById("sentence");
+
+            const words1 = ["자상한", "콧대 높은","자존심 강한","눈이 높은","집착이 심한"];
+            const words2 = ["키가 큰", "키가 작은","덩치가 좋은","빼빼마른","의문의"];
+            const words3 = ["우지", "승관","디노","도겸","원우","정한","에스쿱스"];
+
+            let words = "";
+
+            rand1 = Math.floor(Math.random() * words1.length);
+            rand2 = Math.floor(Math.random() * words2.length);
+            rand3 = Math.floor(Math.random() * words3.length);
+            words = words1[rand1]+" "+words2[rand2]+" "+words3[rand3];
+
+            diceElement.innerHTML += words;
+
+        }
+        makeSentence();
+    </script>
+</body>
+</html>

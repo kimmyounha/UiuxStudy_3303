@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery01</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <div class="displaySlide">
+        <p>오늘 뭐하지</p>
+        <div>수업하지...</div>
+    </div>
+    <div class="displaySlide">
+        <p>오늘 뭐하지</p>
+        <div>수업하지...</div>
+    </div>
+    <div class="displaySlide">
+        <p>오늘 뭐하지</p>
+        <div>수업하지...</div>
+    </div>
+    <script>
+        $(document).ready(function (){
+            $(".displaySlide div").slideUp();
+            $(".displaySlide p").on("click",function(e){
+                $(this).next().slideToggle();
+            })
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function으로 생성자</title>
+
+  <script>
+    function student(name,score,grade){
+      this.name = naem;
+      this.score = score;
+      this.grade = grade;
+      this.comment = function(){
+        alert(`${this.name} 학생의 점수는 ${this.score}이고 등급은 ${this.grade}입니다.`);
+      };
+    }
+    
+    let stu1 = student("김하나",98,"A");
+
+    stu1.comment();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
